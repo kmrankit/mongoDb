@@ -1,1 +1,1 @@
-db.Restaurant.find({$or:[{grades:{$elemMatch:{score:{$gt:80}}}},{grades:{$elemMatch:{$lt:100}}}]},{_id:0,name:1}).pretty()
+db.Restaurant.find({grades:{$elemMatch:{score:{$gt:80,$lt:100}}}},{_id:0,name:1}).pretty()
